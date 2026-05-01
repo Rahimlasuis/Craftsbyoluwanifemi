@@ -4,6 +4,10 @@
 <head>
     <title>Home</title>
     <style>
+        body {
+            padding-bottom: 10000px;
+        }
+
         .header {
             background-color: rgb(233, 228, 228);
             margin-bottom: 0;
@@ -21,12 +25,21 @@
 
         .side {
             position: fixed;
-            top: 76px;
+            top: 80px;
             left: 8px;
-            width: 150px;
+            width: 10%;
             background-color: lightgreen;
             display: inline-block;
         }
+
+        .side_2 {
+            position: fixed;
+            top: 80px;
+            right: 10px;
+            background-color: lightgreen;
+            width: 19%
+        }
+
 
         .images {
             margin: 0;
@@ -35,9 +48,13 @@
         .img {
             background-color: green;
             margin-top: -18px;
-            margin-left: 155px;
+            margin-left: 140px;
             width: 70%;
 
+        }
+
+        ul {
+            text: container;
         }
     </style>
 </head>
@@ -76,6 +93,17 @@
     </div>
     <div class="image">
         <img src="images/IMG-20260427-WA0023.jpg" class="img">
+    </div>
+    <div class="side_2">
+        <div side_2_up>
+            <marquee> ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER!
+                ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER!
+                ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER!
+                ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER!
+                ORDER!</marquee>
+            <p>Delivery Available</p>
+            <p>Get up to 50% discount on all orders!</p>
+        </div>
     </div>
 </body>
 
