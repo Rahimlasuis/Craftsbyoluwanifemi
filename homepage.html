@@ -6,11 +6,20 @@
     <style>
         body {
             padding-bottom: 10000px;
+            background-color: lightpink;
+            padding-top: 0;
         }
 
         .header {
-            background-color: rgb(233, 228, 228);
+            position: fixed;
+            display: flex;
+            justify-content: space-evenly;
+            justify-content: center;
+            width: 100%;
+            left: 1px;
+            background-color: yellow;
             margin-bottom: 0;
+            margin-top: -15px;
         }
 
         .brand {
@@ -24,37 +33,101 @@
         }
 
         .side {
-            position: fixed;
-            top: 80px;
-            left: 8px;
-            width: 10%;
             background-color: lightgreen;
             display: inline-block;
+            width: 20%;
+            margin-top: 40px;
         }
 
         .side_2 {
-            position: fixed;
-            top: 80px;
-            right: 10px;
             background-color: lightgreen;
-            width: 19%
-        }
-
-
-        .images {
-            margin: 0;
+            width: 20%;
+            margin-top: 40px;
         }
 
         .img {
             background-color: green;
-            margin-top: -18px;
-            margin-left: 140px;
-            width: 70%;
+            margin-left: 10px;
+            margin-right: 10px;
+            flex: 2;
+            width: 800px;
+            height: 500px;
+            margin-top: 40px;
+        }
+
+        .account,
+        .help,
+        .cart {
+            display: block;
+            background-color: white;
+            color: green;
+            font-size: 30px;
+            margin: 20px;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .account:hover,
+        .cart:hover,
+        .help:hover {
+            background-color: green;
+            color: white;
+            transition: 0.5s;
+        }
+
+        .search {
+            margin-top: 20px;
+            height: 40px;
+            width: 400px;
+            border-style: none;
+            border-radius: 15px;
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        .top {
+            display: flex;
+            width: 100%;
 
         }
 
-        ul {
-            text: container;
+        .top_products {
+            background-color: yellow;
+            color: black;
+            font-size: 40px;
+            width: 100%;
+            border-radius: 20px;
+            padding-left: 20px;
+            margin-bottom: 20px;
+
+        }
+
+        .item {
+            display: inline-block;
+        }
+
+        .products {
+            height: 100px;
+            width: 100px;
+            margin-right: 15px;
+            border-right-style: solid;
+            padding-right: 10px;
+        }
+
+        .item img {
+            margin-bottom: -15px;
+        }
+
+        .item_name {
+            margin-bottom: -15px;
+        }
+
+        .price_tag {
+            margin_bottom: -30px;
+        }
+
+        .cart_button {
+            margin-top: -30px;
         }
     </style>
 </head>
@@ -62,40 +135,38 @@
 <body>
     <div class="header">
         <p class="brand">CRAFTS BY ULUWANIFEMI</p>
-        <p class="welcome">Welcome
-        <p>
 
     </div>
-    <div class="side">
-        <p>Our crafts are made with love and care, using high-quality materials.</p>
-        <p>Our services include</p>
-        <ul>
-            <li>Totebags</li>
-            <li>Pouches</li>
-            <li>Vest</li>
-            <li>Earpod cases</li>
-            <li>Popcorn bags</li>
-            <li>Ruffled Hat</li>
-            <li>Pillow Cover</li>
-            <li>Garland decor</li>
-            <li>Mesh Top</li>
-            <li>Shrug</li>
-            <li>School Bags</li>
-            <li>Door mat</li>
-            <li>Keyholders</li>
-            <li>Earrings</li>
-            <li>popcorn bag</li>
-            <li>Balengacava</li>
-            <li>Pompom</li>
-            <li>Beanie Cap</li>
-            <li>Handkerchief and socks</li>
-        </ul>
-    </div>
-    <div class="image">
-        <img src="images/IMG-20260427-WA0023.jpg" class="img">
-    </div>
-    <div class="side_2">
-        <div side_2_up>
+    <div class="top">
+        <div class="side">
+            <p>Our crafts are made with love and care, using high-quality materials.</p>
+            <p>Our services include</p>
+            <ul>
+                <li>Totebags</li>
+                <li>Pouches</li>
+                <li>Vest</li>
+                <li>Earpod cases</li>
+                <li>Popcorn bags</li>
+                <li>Ruffled Hat</li>
+                <li>Pillow Cover</li>
+                <li>Garland decor</li>
+                <li>Mesh Top</li>
+                <li>Shrug</li>
+                <li>School Bags</li>
+                <li>Door mat</li>
+                <li>Keyholders</li>
+                <li>Earrings</li>
+                <li>popcorn bag</li>
+                <li>Balengacava</li>
+                <li>Pompom</li>
+                <li>Beanie Cap</li>
+                <li>Handkerchief and socks</li>
+            </ul>
+        </div>
+        <div class="image">
+            <img src="images/IMG-20260427-WA0023.jpg" class="img">
+        </div>
+        <div class="side_2">
             <marquee> ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER!
                 ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER!
                 ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER!
@@ -103,6 +174,103 @@
                 ORDER!</marquee>
             <p>Delivery Available</p>
             <p>Get up to 50% discount on all orders!</p>
+            <button class="account">Account</button>
+            <button class="help">Help</button>
+            <button class="cart">Cart</button>
+        </div>
+    </div>
+    <input class="search" placeholder="Search for products">
+    <div class="top_products">Top Products</div>
+    <div class="items">
+        <div class="item">
+            <img src="items/burrette.jpg" class="products">
+            <p class="item_name">Burrette</p>
+            <p class="price_tag">4000</p>
+            <button class="cart_button">Add to cart</button>
+        </div>
+        <div class="item">
+            <img src="items/ruffled_headbands.jpg" class="products">
+            <p class="item_name">Headbands</p>
+            <p class="price_tag">3000</p>
+            <button class="cart_button">Add to cart</button>
+        </div>
+        <div class="item">
+            <img src="items/bow.jpg" class="products">
+            <p class="item_name">Bow/Hair clip</p>
+            <p class="price_tag">500</p>
+            <button class="cart_button">Add to cart</button>
+        </div>
+        <div class="item">
+            <img src="items/mesh_hairband.jpg" class="products">
+            <p class="item_name">Hair band</p>
+            <p class="price_tag">500</p>
+            <button class="cart_button">Add to cart</button>
+        </div>
+        <div class="item">
+            <img src="items/Ruffled_hat.jpg" class="products">
+            <p class="item_name">Ruffled Hat</p>
+            <p class="price_tag">500</p>
+            <button class="cart_button">Add to cart</button>
+        </div>
+        <div class="item">
+            <img src="items/burrette.jpg" class="products">
+            <p class="item_name">Burrette</p>
+            <p class="price_tag">4000</p>
+            <button class="cart_button">Add to cart</button>
+        </div>
+        <div class="item">
+            <img src="items/ruffled_headbands.jpg" class="products">
+            <p class="item_name">Headbands</p>
+            <p class="price_tag">3000</p>
+            <button class="cart_button">Add to cart</button>
+        </div>
+        <div class="item">
+            <img src="items/bow.jpg" class="products">
+            <p class="item_name">Bow/Hair clip</p>
+            <p class="price_tag">500</p>
+            <button class="cart_button">Add to cart</button>
+        </div>
+        <div class="item">
+            <img src="items/mesh_hairband.jpg" class="products">
+            <p class="item_name">Hair band</p>
+            <p class="price_tag">500</p>
+            <button class="cart_button">Add to cart</button>
+        </div>
+        <div class="item">
+            <img src="items/Ruffled_hat.jpg" class="products">
+            <p class="item_name">Ruffled Hat</p>
+            <p class="price_tag">500</p>
+            <button class="cart_button">Add to cart</button>
+        </div>
+        <div class="item">
+            <img src="items/burrette.jpg" class="products">
+            <p class="item_name">Burrette</p>
+            <p class="price_tag">4000</p>
+            <button class="cart_button">Add to cart</button>
+        </div>
+        <div class="item">
+            <img src="items/ruffled_headbands.jpg" class="products">
+            <p class="item_name">Headbands</p>
+            <p class="price_tag">3000</p>
+            <button class="cart_button">Add to cart</button>
+        </div>
+        <div class="item">
+            <img src="items/bow.jpg" class="products">
+            <p class="item_name">Bow/Hair clip</p>
+            <p class="price_tag">500</p>
+            <button class="cart_button">Add to cart</button>
+        </div>
+        <div class="item">
+            <img src="items/mesh_hairband.jpg" class="products">
+            <p class="item_name">Hair band</p>
+            <p class="price_tag">500</p>
+            <button class="cart_button">Add to cart</button>
+        </div>
+        <div class="item">
+            <img src="items/Ruffled_hat.jpg" class="products">
+            <p class="item_name">Ruffled Hat</p>
+            <p class="price_tag">500</p>
+            <button class="cart_button">Add to cart</button>
         </div>
     </div>
 </body>
