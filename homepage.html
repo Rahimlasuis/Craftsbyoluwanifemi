@@ -5,7 +5,7 @@
     <title>Home</title>
     <style>
         body {
-            padding-bottom: 10000px;
+            padding-bottom: 300px;
             background-color: lightgray;
             padding-top: 0;
         }
@@ -83,6 +83,7 @@
             border-radius: 15px;
             display: block;
             margin-bottom: 20px;
+            text-transform: lowercase;
         }
 
         .top {
@@ -114,16 +115,18 @@
             padding-right: 10px;
         }
 
-        .item img {
-            margin-bottom: -15px;
+        .item_img {
+            margin-bottom: 0;
         }
 
         .item_name {
-            margin-bottom: -15px;
+            margin-top: 0;
+            margin-bottom: 0;
         }
 
         .price_tag {
-            margin_bottom: -30px;
+            margin-top: 0;
+            margin-bottom: 10px;
         }
 
         .cart_button {
@@ -176,103 +179,103 @@
                 ORDER!</marquee>
             <p>Delivery Available</p>
             <p>Get up to 50% discount on all orders!</p>
-            <button class="account">Account</button>
-            <button class="help">Help</button>
-            <button class="cart">Cart</button>
+            <button class="account" id="account-btn" onclick="showAccount()">Account</button>
+            <button class="help" onclick="showHelp()">Help</button>
+            <button class="cart" id="cart_bt" onclick="viewCart()">Cart</button>
         </div>
     </div>
-    <input class="search" placeholder="Search for products">
+    <input class="search" placeholder="Search for products" id="search" onkeyup="searchFunction()">
     <div class="top_products">Top Products</div>
     <div class="items">
         <div class="item">
             <img src="items/burrette.jpg" class="products">
             <p class="item_name">Burrette</p>
             <p class="price_tag">4000</p>
-            <button class="cart_button">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Burrette' , 4000)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/ruffled_headbands.jpg" class="products">
             <p class="item_name">Headbands</p>
             <p class="price_tag">3000</p>
-            <button class="cart_button">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Headbands', 3000)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/bow.jpg" class="products">
             <p class="item_name">Bow/Hair clip</p>
             <p class="price_tag">500</p>
-            <button class="cart_button">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Bow/Hair clip', 500)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/mesh_hairband.jpg" class="products">
             <p class="item_name">Hair band</p>
             <p class="price_tag">500</p>
-            <button class="cart_button">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Hair band', 500)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/Ruffled_hat.jpg" class="products">
             <p class="item_name">Ruffled Hat</p>
             <p class="price_tag">500</p>
-            <button class="cart_button">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Ruffled Hat', 500)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/burrette.jpg" class="products">
             <p class="item_name">Burrette</p>
             <p class="price_tag">4000</p>
-            <button class="cart_button">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Burrette', 4000)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/ruffled_headbands.jpg" class="products">
             <p class="item_name">Headbands</p>
             <p class="price_tag">3000</p>
-            <button class="cart_button">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Headbands', 3000)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/bow.jpg" class="products">
             <p class="item_name">Bow/Hair clip</p>
             <p class="price_tag">500</p>
-            <button class="cart_button">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Bow/Hair clip', 500)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/mesh_hairband.jpg" class="products">
             <p class="item_name">Hair band</p>
             <p class="price_tag">500</p>
-            <button class="cart_button">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Hair band', 500)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/Ruffled_hat.jpg" class="products">
             <p class="item_name">Ruffled Hat</p>
             <p class="price_tag">500</p>
-            <button class="cart_button">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Ruffled Hat', 500)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/burrette.jpg" class="products">
             <p class="item_name">Burrette</p>
             <p class="price_tag">4000</p>
-            <button class="cart_button">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Burrette', 4000)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/ruffled_headbands.jpg" class="products">
             <p class="item_name">Headbands</p>
             <p class="price_tag">3000</p>
-            <button class="cart_button">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Headbands', 3000)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/bow.jpg" class="products">
             <p class="item_name">Bow/Hair clip</p>
             <p class="price_tag">500</p>
-            <button class="cart_button">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Bow/Hair clip', 500)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/mesh_hairband.jpg" class="products">
             <p class="item_name">Hair band</p>
             <p class="price_tag">500</p>
-            <button class="cart_button">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Hair band', 500)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/Ruffled_hat.jpg" class="products">
             <p class="item_name">Ruffled Hat</p>
             <p class="price_tag">500</p>
-            <button class="cart_button">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Ruffled Hat', 500)">Add to cart</button>
         </div>
     </div>
     <div class="top_products">Limited deals</div>
@@ -281,32 +284,361 @@
             <img src="items/bandana.jpg" class="products">
             <p class="item_name">Bandana</p>
             <p class="price_tag">0000</p>
-            <button class="cart_button">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Bandana', 0)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/ghana_ruffledhat.jpg" class="products">
             <p class="item_name">Ghana Ruffledhat</p>
             <p class="price_tag">0000</p>
-            <button class="cart_button">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Ghana Ruffledhat', 0)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/card_holder.jpg" class="products">
             <p class="item_name">Card holder</p>
             <p class="price_tag">0000</p>
-            <button class="cart_button">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Card holder', 0)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/drawstring_pouch.jpg" class="products">
             <p class="item_name">Drawstring pouch</p>
             <p class="price_tag">0000</p>
-            <button class="cart_button">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Drawstring pouch', 0)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/scrunchie.jpg" class="products">
             <p class="item_name">Scrunchie</p>
             <p class="price_tag">0000</p>
-            <button class="cart_button">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Scrunchie', 0)">Add to cart</button>
         </div>
+        <div class="item">
+            <img src="items/bandana.jpg" class="products">
+            <p class="item_name">Bandana</p>
+            <p class="price_tag">0000</p>
+            <button class="cart_button" onclick="addtocart('Bandana', 0)">Add to cart</button>
+        </div>
+        <div class="item">
+            <img src="items/ghana_ruffledhat.jpg" class="products">
+            <p class="item_name">Ghana Ruffledhat</p>
+            <p class="price_tag">0000</p>
+            <button class="cart_button" onclick="addtocart('Ghana Ruffledhat', 0)">Add to cart</button>
+        </div>
+        <div class="item">
+            <img src="items/card_holder.jpg" class="products">
+            <p class="item_name">Card holder</p>
+            <p class="price_tag">0000</p>
+            <button class="cart_button" onclick="addtocart('Card holder', 0)">Add to cart</button>
+        </div>
+        <div class="item">
+            <img src="items/drawstring_pouch.jpg" class="products">
+            <p class="item_name">Drawstring pouch</p>
+            <p class="price_tag">0000</p>
+            <button class="cart_button" onclick="addtocart('Drawstring pouch', 0)">Add to cart</button>
+        </div>
+        <div class="item">
+            <img src="items/scrunchie.jpg" class="products">
+            <p class="item_name">Scrunchie</p>
+            <p class="price_tag">0000</p>
+            <button class="cart_button" onclick="addtocart('Scrunchie', 0)">Add to cart</button>
+        </div>
+        <div class="item">
+            <img src="items/bandana.jpg" class="products">
+            <p class="item_name">Bandana</p>
+            <p class="price_tag">0000</p>
+            <button class="cart_button" onclick="addtocart('Bandana', 0)">Add to cart</button>
+        </div>
+        <div class="item">
+            <img src="items/ghana_ruffledhat.jpg" class="products">
+            <p class="item_name">Ghana Ruffledhat</p>
+            <p class="price_tag">0000</p>
+            <button class="cart_button" onclick="addtocart('Ghana Ruffledhat', 0)">Add to cart</button>
+        </div>
+        <div class="item">
+            <img src="items/card_holder.jpg" class="products">
+            <p class="item_name">Card holder</p>
+            <p class="price_tag">0000</p>
+            <button class="cart_button" onclick="addtocart('Card holder', 0)">Add to cart</button>
+        </div>
+        <div class="item">
+            <img src="items/drawstring_pouch.jpg" class="products">
+            <p class="item_name">Drawstring pouch</p>
+            <p class="price_tag">0000</p>
+            <button class="cart_button" onclick="addtocart('Drawstring pouch', 0)">Add to cart</button>
+        </div>
+        <div class="item">
+            <img src="items/scrunchie.jpg" class="products">
+            <p class="item_name">Scrunchie</p>
+            <p class="price_tag">0000</p>
+            <button class="cart_button" onclick="addtocart('Scrunchie', 0)">Add to cart</button>
+        </div>
+    </div>
+    <div class="top_products">Pre-order</div>
+    <p>We make according to your specifications</p>
+    <div class="items">
+        <div class="item">
+            <img src="items/crochet_bag.jpg" class="products">
+            <p class="item_name">Crochet Bag</p>
+            <p class="price_tag">0000</p>
+            <button class="cart_button" onclick="addtocart('Crochet Bag', 0)">Add to cart</button>
+        </div>
+        <div class="item">
+            <img src="items/leg.jpg" class="products">
+            <p class="item_name">name</p>
+            <p class="price_tag">0000</p>
+            <button class="cart_button" onclick="addtocart('name', 0)">Add to cart</button>
+        </div>
+        <div class="item">
+            <img src="items/totebaga.jpg" class="products">
+            <p class="item_name">Tote bag</p>
+            <p class="price_tag">0000</p>
+            <button class="cart_button" onclick="addtocart('Tote bag', 0)">Add to cart</button>
+        </div>
+        <div class="item">
+            <img src="items/wallet.jpg" class="products">
+            <p class="item_name">Wallet</p>
+            <p class="price_tag">0000</p>
+            <button class="cart_button" onclick="addtocart('Wallet', 0)">Add to cart</button>
+        </div>
+        <div class="item">
+            <img src="items/cases.jpg" class=" products">
+            <p class="item_name">Cases</p>
+            <p class="price_tag">0000</p>
+            <button class="cart_button" onclick="addtocart('Cases', 0)">Add to cart</button>
+        </div>
+        <div class="item">
+            <img src="items/crochet_bag.jpg" class="products">
+            <p class="item_name">Crochet Bag</p>
+            <p class="price_tag">0000</p>
+            <button class="cart_button" onclick="addtocart('Crochet Bag', 0)">Add to cart</button>
+        </div>
+        <div class="item">
+            <img src="items/leg.jpg" class="products">
+            <p class="item_name">name</p>
+            <p class="price_tag">0000</p>
+            <button class="cart_button" onclick="addtocart('name', 0)">Add to cart</button>
+        </div>
+        <div class="item">
+            <img src="items/totebaga.jpg" class="products">
+            <p class="item_name">Tote bag</p>
+            <p class="price_tag">0000</p>
+            <button class="cart_button" onclick="addtocart('Tote bag', 0)">Add to cart</button>
+        </div>
+        <div class="item">
+            <img src="items/wallet.jpg" class="products">
+            <p class="item_name">Wallet</p>
+            <p class="price_tag">0000</p>
+            <button class="cart_button" onclick="addtocart('Wallet', 0)">Add to cart</button>
+        </div>
+        <div class="item">
+            <img src="items/cases.jpg" class=" products">
+            <p class="item_name">Cases</p>
+            <p class="price_tag">0000</p>
+            <button class="cart_button" onclick="addtocart('Cases', 0)">Add to cart</button>
+        </div>
+        <div class="item">
+            <img src="items/crochet_bag.jpg" class="products">
+            <p class="item_name">Crochet Bag</p>
+            <p class="price_tag">0000</p>
+            <button class="cart_button" onclick="addtocart('Crochet Bag', 0)">Add to cart</button>
+        </div>
+        <div class="item">
+            <img src="items/leg.jpg" class="products">
+            <p class="item_name">name</p>
+            <p class="price_tag">0000</p>
+            <button class="cart_button" onclick="addtocart('name', 0)">Add to cart</button>
+        </div>
+        <div class="item">
+            <img src="items/totebaga.jpg" class="products">
+            <p class="item_name">Tote bag</p>
+            <p class="price_tag">0000</p>
+            <button class="cart_button" onclick="addtocart('Tote bag', 0)">Add to cart</button>
+        </div>
+        <div class="item">
+            <img src="items/wallet.jpg" class="products">
+            <p class="item_name">Wallet</p>
+            <p class="price_tag">0000</p>
+            <button class="cart_button" onclick="addtocart('Wallet', 0)">Add to cart</button>
+        </div>
+        <div class="item">
+            <img src="items/cases.jpg" class=" products">
+            <p class="item_name">Cases</p>
+            <p class="price_tag">0000</p>
+            <button class="cart_button" onclick="addtocart('Cases', 0)">Add to cart</button>
+        </div>
+    </div>
+    <footer style="text-align: center; padding: 20px; background-color: #333; color: white; font-size: 12px;">
+        <p>&copy; 2026 Crafts by Oluwanifemi. All Rights Reserved. | Designed with Love.</p>
+    </footer>
+    <div class="closing" style="text-align: center;">
+        <p>Contact us at info@craftsbyoluwanifemi.com</p>
+        <p>Follow us on social media: @craftsbyoluwanifemi</p>
+        <p>Phone: +234 9162498534</p>
+        <p>Business Hours: Mon-Sat 9am - 6pm</p>
+        <p>Thanks for shopping with us!</p>
+
+    </div>
+    <script>
+        function searchFunction() {
+            var input, filter, items, itemName, i, txtValue;
+            input = document.getElementById('search');
+            filter = input.value.toLowerCase();
+            items = document.getElementsByClassName('item');
+
+            for (i = 0; i < items.length; i++) {
+                itemName = items[i].getElementsByClassName('item_name')[0];
+                txtValue = itemName.textContent || itemName.innerText;
+
+                if (txtValue.toLowerCase().indexOf(filter) > -1) {
+                    items[i].style.display = "";
+                } else {
+                    items[i].style.display = "none";
+                }
+            }
+        }
+        let cart =
+            JSON.parse(localStorage.getItem('cart')) || [];
+        function addtocart(name, price) {
+            cart.push({ name: name, price: price });
+            localStorage.setItem('craftscart', JSON.stringify(cart));
+            updatecartUI();
+        }
+        function updatecartUI() {
+            const cartButton = document.getElementById('cart_bt');
+            if (cart_bt) {
+                cart_bt.innerText = "cart (" + cart.length + ")";
+            }
+        }
+        function viewCart() {
+            const modal = document.getElementById('cart-modal');
+            const list = document.getElementById('cart-items-list');
+            const totalDisplay = document.getElementById('cart-total');
+
+            // Clear the old list before showing the new one
+            list.innerHTML = "";
+            let total = 0;
+
+            if (cart.length === 0) {
+                list.innerHTML = "<p>Your cart is empty.</p>";
+            } else {
+                cart.forEach((item, index) => {
+                    list.innerHTML += `<p>${item.name} - ₦${item.price}</p>`;
+                    total += item.price;
+                });
+            }
+
+            totalDisplay.innerText = total;
+            modal.style.display = "block";
+        }
+
+        function closeCart() {
+            document.getElementById('cart-modal').style.display = "none";
+        }
+
+        function clearCart() {
+            cart = [];
+            localStorage.removeItem('craftsCart');
+            updateCartUI();
+            viewCart();
+        }
+        function showHelp() {
+            document.getElementById('help-modal').style.display = "block";
+        }
+
+        function closeHelp() {
+            document.getElementById('help-modal').style.display = "none";
+        }
+        function showAccount() {
+            document.getElementById('account-modal').style.display = "block";
+        }
+
+        function closeAccount() {
+            document.getElementById('account-modal').style.display = "none";
+        }
+
+        function registerUser() {
+            const user = document.getElementById('reg-user').value;
+            const email = document.getElementById('reg-email').value;
+            const pass1 = document.getElementById('reg-pass1').value;
+            const pass2 = document.getElementById('reg-pass2').value;
+            const addr = document.getElementById('reg-address').value;
+            const phone = document.getElementById('reg-phone').value;
+
+            if (!user || !email || !pass1 || !addr || !phone) {
+                alert("All fields are required!");
+                return;
+            }
+
+            if (pass1 !== pass2) {
+                alert("Passwords do not match!");
+                return;
+            }
+
+            const userData = {
+                username: user,
+                email: email,
+                password: pass1,
+                address: addr,
+                phone: phone,
+                signupDate: new Date().toLocaleDateString()
+            };
+
+            localStorage.setItem('registeredUser', JSON.stringify(userData));
+
+            alert("Welcome, " + user + "! Your account for Crafts by Oluwanifemi has been created.");
+
+            const accountBtn = document.getElementById('account-btn');
+            if (accountBtn) {
+                accountBtn.innerText = user;
+            }
+
+            closeAccount();
+        }
+    </script>
+    <div id="cart-modal"
+        style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); background:white; border:2px solid #000; padding:20px; z-index:1000; width:300px;">
+        <h2>Your Cart</h2>
+        <div id="cart-items-list"></div>
+        <hr>
+        <p><strong>Total: ₦<span id="cart-total">0</span></strong></p>
+        <button onclick="closeCart()">Close</button>
+        <button onclick="clearCart()" style="color:red;">Clear Cart</button>
+    </div>
+    <div id="help-modal"
+        style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); background:white; border:2px solid #000; padding:20px; z-index:1001; width:300px; font-family: sans-serif;">
+        <h2>How to Shop</h2>
+        <ul>
+            <li><strong>Search:</strong> Type in the search bar to find specific crafts.</li>
+            <li><strong>Add:</strong> Click "Add to cart" under any item you love.</li>
+            <li><strong>View:</strong> Click the "Cart" button in the sidebar to see your total.</li>
+        </ul>
+        <button onclick="closeHelp()">Got it!</button>
+    </div>
+    <div id="account-modal"
+        style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); background:white; border:2px solid #000; padding:20px; z-index:1002; width:350px; max-height: 80vh; overflow-y: auto; font-family: sans-serif;">
+        <h2>Create Account</h2>
+
+        <label>Username</label>
+        <input type="text" id="reg-user" placeholder="Enter username" style="width:100%; margin-bottom:10px;">
+
+        <label>Gmail Address</label>
+        <input type="email" id="reg-email" placeholder="example@gmail.com" style="width:100%; margin-bottom:10px;">
+
+        <label>Password</label>
+        <input type="password" id="reg-pass1" placeholder="Create password" style="width:100%; margin-bottom:10px;">
+
+        <label>Confirm Password</label>
+        <input type="password" id="reg-pass2" placeholder="Repeat password" style="width:100%; margin-bottom:10px;">
+
+        <label>Home Address</label>
+        <input type="text" id="reg-address" placeholder="Full address" style="width:100%; margin-bottom:10px;">
+
+        <label>Phone Number</label>
+        <input type="tel" id="reg-phone" placeholder="080..." style="width:100%; margin-bottom:15px;">
+
+        <button onclick="registerUser()"
+            style="width:100%; background:green; color:white; padding:10px; border:none; cursor:pointer;">Create
+            Account</button>
+        <button onclick="closeAccount()"
+            style="width:100%; margin-top:5px; background:lightgray; border:none; padding:5px; cursor:pointer;">Cancel</button>
     </div>
 </body>
 
