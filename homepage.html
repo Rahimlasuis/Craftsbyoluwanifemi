@@ -7,24 +7,28 @@
         body {
             padding-bottom: 300px;
             background-color: lightgray;
-            padding-top: 0;
+            padding-top: 25px;
         }
 
         .header {
             position: fixed;
+            top: 0;
             display: flex;
             justify-content: space-evenly;
             justify-content: center;
             width: 100%;
             left: 1px;
-            background-color: yellow;
+            background-color: #efefef;
             margin-bottom: 0;
             margin-top: -15px;
+            z-index: 5;
         }
+
 
         .brand {
             text-align: center;
-            text-decoration: solid
+            text-decoration: solid;
+            margin-top: 25px;
         }
 
         .top {
@@ -33,53 +37,45 @@
             justify-content: space-between;
             align-items: flex-start;
             width: 100%;
-            max-width: 1300px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 10px;
             box-sizing: border-box;
-            gap: 20px;
-
+            gap: 15px;
+            overflow: hidden;
         }
 
         .side,
         .side_2 {
-            flex: 1;
-            width: 100%;
-            background-color: #90ee90;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-            box-sizing: border-box;
+            width: 25%;
+            display: inline-block;
+            height: 330px;
         }
 
         .image {
-            flex: 2;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-            text-align: center;
-            max-width: 750px;
-            margin: 0 auto;
-            min-width: 500px;
-            min-height: 400px;
+            width: 40%;
+            display: inline-block;
+            height: 450px;
         }
 
         #img {
             width: 100%;
-            max-width: 700px;
             height: auto;
             display: block;
-            margin: 0 auto;
-            border-radius: 8px;
+            border-radius: 12px;
+            vertical-align: middle;
+            align-items: center;
+            align-self: center;
         }
 
         .account,
         .help,
         .cart {
             display: block;
-            background-color: white;
-            color: green;
+            background-color: #9dd33f;
+            width: 150px;
+            border-radius: 10px;
+            color: white;
             font-size: 30px;
             margin: 20px;
             align-items: center;
@@ -91,8 +87,27 @@
         .account:hover,
         .cart:hover,
         .help:hover {
-            background-color: #d4fcd4;
-            transform: scale(1.1)
+            background-color: #21c221;
+            transform: scale(1.1);
+        }
+
+        .notification {
+            position: fixed;
+            bottom: 20px;
+            right: -300px;
+            background-color: #556B2F;
+            color: white;
+            padding: 16px 24px;
+            border-radius: 8px;
+            font-weight: bold;
+            box-shadow: 0 4px 12-x rgba(0, 0, 0, 0.2);
+            transition: right 0.5s ease-in-out;
+            z-index: 2000;
+        }
+
+        .notification.show {
+            right: 20px;
+            bottom: 20px;
         }
 
         .search_box {
@@ -104,12 +119,15 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            margin-left: 100px;
 
         }
 
         #search {
-            width: 90%;
-            max-width: 500px;
+            display: flex;
+            justify-content: center;
+            width: 70%;
+            margin-left: 100px;
             padding: 12px 20px;
             font-size: 16px;
             border: 2px solid #ccc;
@@ -133,13 +151,15 @@
 
 
         .top_products {
-            background-color: yellow;
-            color: black;
-            font-size: 40px;
-            width: 100%;
-            border-radius: 20px;
+            color: #2c3e50;
+            font-size: 30px;
+            width: content;
             padding-left: 20px;
+            margin-top: 30px;
             margin-bottom: 20px;
+            border: 3.75px solid #92ac65;
+            border-radius: 20px;
+
 
         }
 
@@ -188,44 +208,98 @@
         .item_name {
             margin-top: 0;
             margin-bottom: 0;
+            align-self: center;
+            font-size: 30px;
         }
 
         .price_tag {
             margin-top: 0;
             margin-bottom: 10px;
+            align-self: center;
+            font-size: 23px;
         }
 
         .cart_button {
             margin-bottom: 20px;
             background-color: lightgreen;
             border-style: solid;
+            border-style: none;
+            height: 25px;
+            border-radius: 10px;
+            width: 200px;
+            align-self: center;
         }
 
+        .announcement_div {
+            background-color: #556b2f;
+            color: white;
+            overflow: hidden;
+            white-space: nowrap;
+            padding: 15px 0 5px 0;
+            font-size: 15ppx;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .announcement_text {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 25s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            100% {
+                transform: translate(-100%, 0);
+            }
+        }
+
+
         @media (max-width: 900px) {
-            .all {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .side,
-            .side_2 {
-                width: 100%;
-            }
-
-            .side ul {
+            .items {
                 display: grid;
-                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+                grid-template-columns: 1fr 1fr;
+                gap: 2opx;
+                width: 100%;
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 20px;
+                box-sizing: border-box;
+            }
+
+            .image {
+                display: block;
+            }
+
+
+        }
+
+        @media (min-width: 1200px) {
+            .items {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                gap: 30px;
             }
         }
     </style>
 </head>
 
 <body>
+    <div class="announcement_div">
+        <div class="announcement_text">Welcome to Crafts by Oluwanifemi Explore our unique handmade crafts and enjoy up
+            to 50% off on all orders. Shop now and experience the beauty of artisanal creations.
+        </div>
+    </div>
+    <div class="notification" id="notification">🛒 Item added to cart</div>
     <div class="header">
-        <p class="brand">CRAFTS BY ULUWANIFEMI</p>
+        <p class="brand"><span class="specials">~</span>CRAFTS BY OLUWANIFEMI</p>
+
     </div>
     <div class="top">
-        <aside class="side">
+        <div class="side">
             <p>Our crafts are made with love and care, using high-quality materials.</p>
             <p>Our services include</p>
             <ul>
@@ -233,27 +307,20 @@
                 <li>Pouches</li>
                 <li>Vest</li>
                 <li>Earpod cases</li>
-                <li>Popcorn bags</li>
                 <li>Ruffled Hat</li>
                 <li>Pillow Cover</li>
-                <li>Garland decor</li>
                 <li>Mesh Top</li>
                 <li>Shrug</li>
                 <li>School Bags</li>
-                <li>Door mat</li>
                 <li>Keyholders</li>
-                <li>Earrings</li>
-                <li>popcorn bag</li>
-                <li>Balengacava</li>
-                <li>Pompom</li>
                 <li>Beanie Cap</li>
                 <li>Handkerchief and socks</li>
             </ul>
-        </aside>
-        <main class="image">
+        </div>
+        <div class="image">
             <img src="images/IMG-20260427-WA0023.jpg" id="img">
-        </main>
-        <aside class="side_2">
+        </div>
+        <div class="side_2">
             <marquee> ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER!
                 ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER!
                 ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER! ORDER!
@@ -263,8 +330,8 @@
             <p>Get up to 50% discount on all orders!</p>
             <button class="account" id="account-btn" onclick="showAccount()">Account</button>
             <button class="help" onclick="showHelp()">Help</button>
-            <button class="cart" id="cart_bt" onclick="viewCart()">Cart</button>
-        </aside>
+            <button class="cart" id="cart_bt" onclick="viewCart()">🛒 Cart</button>
+        </div>
     </div>
     <div class="search_container">
         <input class="search" style="align-items: center;" placeholder="Search for products" id="search"
@@ -458,181 +525,181 @@
         <div class="item">
             <img src="items/bandana.jpg" class="products">
             <p class="item_name">Bandana</p>
-            <p class="price_tag">0000</p>
+            <p class="price_tag">700</p>
             <button class="cart_button" onclick="addtocart('Bandana', 0)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/ghana_ruffledhat.jpg" class="products">
             <p class="item_name">Ghana Ruffledhat</p>
-            <p class="price_tag">0000</p>
+            <p class="price_tag">6000</p>
             <button class="cart_button" onclick="addtocart('Ghana Ruffledhat', 0)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/card_holder.jpg" class="products">
             <p class="item_name">Card holder</p>
-            <p class="price_tag">0000</p>
+            <p class="price_tag">1500</p>
             <button class="cart_button" onclick="addtocart('Card holder', 0)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/drawstring_pouch.jpg" class="products">
             <p class="item_name">Drawstring pouch</p>
-            <p class="price_tag">0000</p>
+            <p class="price_tag">1000</p>
             <button class="cart_button" onclick="addtocart('Drawstring pouch', 0)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/scrunchie.jpg" class="products">
             <p class="item_name">Scrunchie</p>
-            <p class="price_tag">0000</p>
+            <p class="price_tag">700</p>
             <button class="cart_button" onclick="addtocart('Scrunchie', 0)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/bandana.jpg" class="products">
             <p class="item_name">Bandana</p>
-            <p class="price_tag">0000</p>
+            <p class="price_tag">700</p>
             <button class="cart_button" onclick="addtocart('Bandana', 0)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/ghana_ruffledhat.jpg" class="products">
             <p class="item_name">Ghana Ruffledhat</p>
-            <p class="price_tag">0000</p>
+            <p class="price_tag">6000</p>
             <button class="cart_button" onclick="addtocart('Ghana Ruffledhat', 0)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/card_holder.jpg" class="products">
             <p class="item_name">Card holder</p>
-            <p class="price_tag">0000</p>
+            <p class="price_tag">1500</p>
             <button class="cart_button" onclick="addtocart('Card holder', 0)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/drawstring_pouch.jpg" class="products">
             <p class="item_name">Drawstring pouch</p>
-            <p class="price_tag">0000</p>
+            <p class="price_tag">1000</p>
             <button class="cart_button" onclick="addtocart('Drawstring pouch', 0)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/scrunchie.jpg" class="products">
             <p class="item_name">Scrunchie</p>
-            <p class="price_tag">0000</p>
+            <p class="price_tag">700</p>
             <button class="cart_button" onclick="addtocart('Scrunchie', 0)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/bandana.jpg" class="products">
             <p class="item_name">Bandana</p>
-            <p class="price_tag">0000</p>
+            <p class="price_tag">700</p>
             <button class="cart_button" onclick="addtocart('Bandana', 0)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/ghana_ruffledhat.jpg" class="products">
             <p class="item_name">Ghana Ruffledhat</p>
-            <p class="price_tag">0000</p>
+            <p class="price_tag">6000</p>
             <button class="cart_button" onclick="addtocart('Ghana Ruffledhat', 0)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/card_holder.jpg" class="products">
             <p class="item_name">Card holder</p>
-            <p class="price_tag">0000</p>
+            <p class="price_tag">1500</p>
             <button class="cart_button" onclick="addtocart('Card holder', 0)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/drawstring_pouch.jpg" class="products">
             <p class="item_name">Drawstring pouch</p>
-            <p class="price_tag">0000</p>
+            <p class="price_tag">1000</p>
             <button class="cart_button" onclick="addtocart('Drawstring pouch', 0)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/scrunchie.jpg" class="products">
             <p class="item_name">Scrunchie</p>
-            <p class="price_tag">0000</p>
+            <p class="price_tag">700</p>
             <button class="cart_button" onclick="addtocart('Scrunchie', 0)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/bandana.jpg" class="products">
             <p class="item_name">Bandana</p>
-            <p class="price_tag">0000</p>
+            <p class="price_tag">700</p>
             <button class="cart_button" onclick="addtocart('Bandana', 0)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/ghana_ruffledhat.jpg" class="products">
             <p class="item_name">Ghana Ruffledhat</p>
-            <p class="price_tag">0000</p>
+            <p class="price_tag">6000 </p>
             <button class="cart_button" onclick="addtocart('Ghana Ruffledhat', 0)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/card_holder.jpg" class="products">
             <p class="item_name">Card holder</p>
-            <p class="price_tag">0000</p>
+            <p class="price_tag">1500</p>
             <button class="cart_button" onclick="addtocart('Card holder', 0)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/drawstring_pouch.jpg" class="products">
             <p class="item_name">Drawstring pouch</p>
-            <p class="price_tag">0000</p>
+            <p class="price_tag">1000</p>
             <button class="cart_button" onclick="addtocart('Drawstring pouch', 0)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/scrunchie.jpg" class="products">
             <p class="item_name">Scrunchie</p>
-            <p class="price_tag">0000</p>
+            <p class="price_tag">700</p>
             <button class="cart_button" onclick="addtocart('Scrunchie', 0)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/bandana.jpg" class="products">
             <p class="item_name">Bandana</p>
-            <p class="price_tag">0000</p>
+            <p class="price_tag">700</p>
             <button class="cart_button" onclick="addtocart('Bandana', 0)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/ghana_ruffledhat.jpg" class="products">
             <p class="item_name">Ghana Ruffledhat</p>
-            <p class="price_tag">0000</p>
+            <p class="price_tag">6000</p>
             <button class="cart_button" onclick="addtocart('Ghana Ruffledhat', 0)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/card_holder.jpg" class="products">
             <p class="item_name">Card holder</p>
-            <p class="price_tag">0000</p>
+            <p class="price_tag">1500</p>
             <button class="cart_button" onclick="addtocart('Card holder', 0)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/drawstring_pouch.jpg" class="products">
             <p class="item_name">Drawstring pouch</p>
-            <p class="price_tag">0000</p>
+            <p class="price_tag">1000</p>
             <button class="cart_button" onclick="addtocart('Drawstring pouch', 0)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/scrunchie.jpg" class="products">
             <p class="item_name">Scrunchie</p>
-            <p class="price_tag">0000</p>
+            <p class="price_tag">700</p>
             <button class="cart_button" onclick="addtocart('Scrunchie', 0)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/bandana.jpg" class="products">
             <p class="item_name">Bandana</p>
-            <p class="price_tag">0000</p>
+            <p class="price_tag">700</p>
             <button class="cart_button" onclick="addtocart('Bandana', 0)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/ghana_ruffledhat.jpg" class="products">
             <p class="item_name">Ghana Ruffledhat</p>
-            <p class="price_tag">0000</p>
+            <p class="price_tag">6000 </p>
             <button class="cart_button" onclick="addtocart('Ghana Ruffledhat', 0)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/card_holder.jpg" class="products">
             <p class="item_name">Card holder</p>
-            <p class="price_tag">0000</p>
+            <p class="price_tag">1500</p>
             <button class="cart_button" onclick="addtocart('Card holder', 0)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/drawstring_pouch.jpg" class="products">
             <p class="item_name">Drawstring pouch</p>
-            <p class="price_tag">0000</p>
+            <p class="price_tag">1000</p>
             <button class="cart_button" onclick="addtocart('Drawstring pouch', 0)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/scrunchie.jpg" class="products">
             <p class="item_name">Scrunchie</p>
-            <p class="price_tag">0000</p>
+            <p class="price_tag">700</p>
             <button class="cart_button" onclick="addtocart('Scrunchie', 0)">Add to cart</button>
         </div>
     </div>
@@ -642,181 +709,181 @@
         <div class="item">
             <img src="items/crochet_bag.jpg" class="products">
             <p class="item_name">Crochet Bag</p>
-            <p class="price_tag">0000</p>
+            <p class="price_tag">11000</p>
             <button class="cart_button" onclick="addtocart('Crochet Bag', 0)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/leg.jpg" class="products">
-            <p class="item_name">name</p>
-            <p class="price_tag">0000</p>
-            <button class="cart_button" onclick="addtocart('name', 0)">Add to cart</button>
+            <p class="item_name">Slippers</p>
+            <p class="price_tag">7000</p>
+            <button class="cart_button" onclick="addtocart('Slippers', 0)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/totebaga.jpg" class="products">
             <p class="item_name">Tote bag</p>
-            <p class="price_tag">0000</p>
+            <p class="price_tag">2000</p>
             <button class="cart_button" onclick="addtocart('Tote bag', 0)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/wallet.jpg" class="products">
             <p class="item_name">Wallet</p>
-            <p class="price_tag">0000</p>
+            <p class="price_tag">1000</p>
             <button class="cart_button" onclick="addtocart('Wallet', 0)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/cases.jpg" class=" products">
             <p class="item_name">Cases</p>
-            <p class="price_tag">0000</p>
+            <p class="price_tag">1000</p>
             <button class="cart_button" onclick="addtocart('Cases', 0)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/crochet_bag.jpg" class="products">
             <p class="item_name">Crochet Bag</p>
-            <p class="price_tag">0000</p>
+            <p class="price_tag">11000</p>
             <button class="cart_button" onclick="addtocart('Crochet Bag', 0)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/leg.jpg" class="products">
-            <p class="item_name">name</p>
-            <p class="price_tag">0000</p>
-            <button class="cart_button" onclick="addtocart('name', 0)">Add to cart</button>
+            <p class="item_name">Slippers</p>
+            <p class="price_tag">7000</p>
+            <button class="cart_button" onclick="addtocart('Slippers', 0)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/totebaga.jpg" class="products">
             <p class="item_name">Tote bag</p>
-            <p class="price_tag">0000</p>
+            <p class="price_tag">2000</p>
             <button class="cart_button" onclick="addtocart('Tote bag', 0)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/wallet.jpg" class="products">
             <p class="item_name">Wallet</p>
-            <p class="price_tag">0000</p>
+            <p class="price_tag">1000</p>
             <button class="cart_button" onclick="addtocart('Wallet', 0)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/cases.jpg" class=" products">
             <p class="item_name">Cases</p>
-            <p class="price_tag">0000</p>
+            <p class="price_tag">1000</p>
             <button class="cart_button" onclick="addtocart('Cases', 0)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/crochet_bag.jpg" class="products">
             <p class="item_name">Crochet Bag</p>
-            <p class="price_tag">0000</p>
+            <p class="price_tag">11000</p>
             <button class="cart_button" onclick="addtocart('Crochet Bag', 0)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/leg.jpg" class="products">
-            <p class="item_name">name</p>
-            <p class="price_tag">0000</p>
-            <button class="cart_button" onclick="addtocart('name', 0)">Add to cart</button>
+            <p class="item_name">Slippers</p>
+            <p class="price_tag">7000</p>
+            <button class="cart_button" onclick="addtocart('Slippers', 0)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/totebaga.jpg" class="products">
             <p class="item_name">Tote bag</p>
-            <p class="price_tag">0000</p>
+            <p class="price_tag">2000</p>
             <button class="cart_button" onclick="addtocart('Tote bag', 0)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/wallet.jpg" class="products">
             <p class="item_name">Wallet</p>
-            <p class="price_tag">0000</p>
+            <p class="price_tag">1000</p>
             <button class="cart_button" onclick="addtocart('Wallet', 0)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/cases.jpg" class=" products">
             <p class="item_name">Cases</p>
-            <p class="price_tag">0000</p>
+            <p class="price_tag">1000</p>
             <button class="cart_button" onclick="addtocart('Cases', 0)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/crochet_bag.jpg" class="products">
             <p class="item_name">Crochet Bag</p>
-            <p class="price_tag">0000</p>
+            <p class="price_tag">11000</p>
             <button class="cart_button" onclick="addtocart('Crochet Bag', 0)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/leg.jpg" class="products">
-            <p class="item_name">name</p>
-            <p class="price_tag">0000</p>
-            <button class="cart_button" onclick="addtocart('name', 0)">Add to cart</button>
+            <p class="item_name">Slippers</p>
+            <p class="price_tag">7000</p>
+            <button class="cart_button" onclick="addtocart('Slippers', 0)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/totebaga.jpg" class="products">
             <p class="item_name">Tote bag</p>
-            <p class="price_tag">0000</p>
+            <p class="price_tag">2000</p>
             <button class="cart_button" onclick="addtocart('Tote bag', 0)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/wallet.jpg" class="products">
             <p class="item_name">Wallet</p>
-            <p class="price_tag">0000</p>
+            <p class="price_tag">1000</p>
             <button class="cart_button" onclick="addtocart('Wallet', 0)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/cases.jpg" class=" products">
             <p class="item_name">Cases</p>
-            <p class="price_tag">0000</p>
+            <p class="price_tag">1000</p>
             <button class="cart_button" onclick="addtocart('Cases', 0)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/crochet_bag.jpg" class="products">
             <p class="item_name">Crochet Bag</p>
-            <p class="price_tag">0000</p>
+            <p class="price_tag">11000</p>
             <button class="cart_button" onclick="addtocart('Crochet Bag', 0)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/leg.jpg" class="products">
-            <p class="item_name">name</p>
-            <p class="price_tag">0000</p>
-            <button class="cart_button" onclick="addtocart('name', 0)">Add to cart</button>
+            <p class="item_name">Slippers</p>
+            <p class="price_tag">7000</p>
+            <button class="cart_button" onclick="addtocart('Slippers', 0)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/totebaga.jpg" class="products">
             <p class="item_name">Tote bag</p>
-            <p class="price_tag">0000</p>
+            <p class="price_tag">2000</p>
             <button class="cart_button" onclick="addtocart('Tote bag', 0)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/wallet.jpg" class="products">
             <p class="item_name">Wallet</p>
-            <p class="price_tag">0000</p>
+            <p class="price_tag">1000</p>
             <button class="cart_button" onclick="addtocart('Wallet', 0)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/cases.jpg" class=" products">
             <p class="item_name">Cases</p>
-            <p class="price_tag">0000</p>
+            <p class="price_tag">1000</p>
             <button class="cart_button" onclick="addtocart('Cases', 0)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/crochet_bag.jpg" class="products">
             <p class="item_name">Crochet Bag</p>
-            <p class="price_tag">0000</p>
+            <p class="price_tag">11000</p>
             <button class="cart_button" onclick="addtocart('Crochet Bag', 0)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/leg.jpg" class="products">
-            <p class="item_name">name</p>
-            <p class="price_tag">0000</p>
-            <button class="cart_button" onclick="addtocart('name', 0)">Add to cart</button>
+            <p class="item_name">Slippers</p>
+            <p class="price_tag">7000</p>
+            <button class="cart_button" onclick="addtocart('Slippers', 0)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/totebaga.jpg" class="products">
             <p class="item_name">Tote bag</p>
-            <p class="price_tag">0000</p>
+            <p class="price_tag">2000</p>
             <button class="cart_button" onclick="addtocart('Tote bag', 0)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/wallet.jpg" class="products">
             <p class="item_name">Wallet</p>
-            <p class="price_tag">0000</p>
+            <p class="price_tag">1000</p>
             <button class="cart_button" onclick="addtocart('Wallet', 0)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/cases.jpg" class=" products">
             <p class="item_name">Cases</p>
-            <p class="price_tag">0000</p>
+            <p class="price_tag">1000</p>
             <button class="cart_button" onclick="addtocart('Cases', 0)">Add to cart</button>
         </div>
     </div>
@@ -855,11 +922,25 @@
             cart.push({ name: name, price: price });
             localStorage.setItem('craftscart', JSON.stringify(cart));
             updatecartUI();
+            shownotification();
+        }
+
+
+        function shownotification() {
+            const notification = document.getElementById('notification');
+            notification.style.right = '20px';
+            notification.classList.add('show');
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 3000);
+            setTimeout(() => {
+                notification.style.right = '-300px';
+            }, 2000)
         }
         function updatecartUI() {
             const cartButton = document.getElementById('cart_bt');
             if (cart_bt) {
-                cart_bt.innerText = "cart (" + cart.length + ")";
+                cart_bt.innerText = "🛒 Cart (" + cart.length + ")";
             }
         }
         function viewCart() {
