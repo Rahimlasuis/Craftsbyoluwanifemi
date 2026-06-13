@@ -110,6 +110,16 @@
             bottom: 20px;
         }
 
+
+        .clear_btn {
+            width: 100%;
+            background: none;
+            color: #cc0000;
+            padding: 8px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
         .search_box {
             width: 100%;
             max-width: 1200px;
@@ -245,6 +255,23 @@
             display: inline-block;
             padding-left: 100%;
             animation: marquee 25s linear infinite;
+        }
+
+        #cart_drawer {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            max-width: 400px;
+            background-color: #ffffff;
+            border: 2px solid #556b2f;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            z-index: 1000000;
+            text-align: center;
         }
 
         @keyframes marquee {
@@ -526,181 +553,181 @@
             <img src="items/bandana.jpg" class="products">
             <p class="item_name">Bandana</p>
             <p class="price_tag">700</p>
-            <button class="cart_button" onclick="addtocart('Bandana', 0)">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Bandana', 700)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/ghana_ruffledhat.jpg" class="products">
             <p class="item_name">Ghana Ruffledhat</p>
             <p class="price_tag">6000</p>
-            <button class="cart_button" onclick="addtocart('Ghana Ruffledhat', 0)">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Ghana Ruffledhat', 6000)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/card_holder.jpg" class="products">
             <p class="item_name">Card holder</p>
             <p class="price_tag">1500</p>
-            <button class="cart_button" onclick="addtocart('Card holder', 0)">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Card holder', 1500)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/drawstring_pouch.jpg" class="products">
             <p class="item_name">Drawstring pouch</p>
             <p class="price_tag">1000</p>
-            <button class="cart_button" onclick="addtocart('Drawstring pouch', 0)">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Drawstring pouch', 1000)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/scrunchie.jpg" class="products">
             <p class="item_name">Scrunchie</p>
             <p class="price_tag">700</p>
-            <button class="cart_button" onclick="addtocart('Scrunchie', 0)">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Scrunchie', 700)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/bandana.jpg" class="products">
             <p class="item_name">Bandana</p>
             <p class="price_tag">700</p>
-            <button class="cart_button" onclick="addtocart('Bandana', 0)">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Bandana', 700)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/ghana_ruffledhat.jpg" class="products">
             <p class="item_name">Ghana Ruffledhat</p>
             <p class="price_tag">6000</p>
-            <button class="cart_button" onclick="addtocart('Ghana Ruffledhat', 0)">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Ghana Ruffledhat', 6000)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/card_holder.jpg" class="products">
             <p class="item_name">Card holder</p>
             <p class="price_tag">1500</p>
-            <button class="cart_button" onclick="addtocart('Card holder', 0)">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Card holder', 1500)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/drawstring_pouch.jpg" class="products">
             <p class="item_name">Drawstring pouch</p>
             <p class="price_tag">1000</p>
-            <button class="cart_button" onclick="addtocart('Drawstring pouch', 0)">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Drawstring pouch', 1000)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/scrunchie.jpg" class="products">
             <p class="item_name">Scrunchie</p>
             <p class="price_tag">700</p>
-            <button class="cart_button" onclick="addtocart('Scrunchie', 0)">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Scrunchie', 700)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/bandana.jpg" class="products">
             <p class="item_name">Bandana</p>
             <p class="price_tag">700</p>
-            <button class="cart_button" onclick="addtocart('Bandana', 0)">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Bandana', 700)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/ghana_ruffledhat.jpg" class="products">
             <p class="item_name">Ghana Ruffledhat</p>
             <p class="price_tag">6000</p>
-            <button class="cart_button" onclick="addtocart('Ghana Ruffledhat', 0)">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Ghana Ruffledhat', 6000)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/card_holder.jpg" class="products">
             <p class="item_name">Card holder</p>
             <p class="price_tag">1500</p>
-            <button class="cart_button" onclick="addtocart('Card holder', 0)">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Card holder', 1500)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/drawstring_pouch.jpg" class="products">
             <p class="item_name">Drawstring pouch</p>
             <p class="price_tag">1000</p>
-            <button class="cart_button" onclick="addtocart('Drawstring pouch', 0)">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Drawstring pouch', 1000)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/scrunchie.jpg" class="products">
             <p class="item_name">Scrunchie</p>
             <p class="price_tag">700</p>
-            <button class="cart_button" onclick="addtocart('Scrunchie', 0)">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Scrunchie', 700)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/bandana.jpg" class="products">
             <p class="item_name">Bandana</p>
             <p class="price_tag">700</p>
-            <button class="cart_button" onclick="addtocart('Bandana', 0)">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Bandana', 700)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/ghana_ruffledhat.jpg" class="products">
             <p class="item_name">Ghana Ruffledhat</p>
             <p class="price_tag">6000 </p>
-            <button class="cart_button" onclick="addtocart('Ghana Ruffledhat', 0)">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Ghana Ruffledhat', 6000)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/card_holder.jpg" class="products">
             <p class="item_name">Card holder</p>
             <p class="price_tag">1500</p>
-            <button class="cart_button" onclick="addtocart('Card holder', 0)">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Card holder', 1500)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/drawstring_pouch.jpg" class="products">
             <p class="item_name">Drawstring pouch</p>
             <p class="price_tag">1000</p>
-            <button class="cart_button" onclick="addtocart('Drawstring pouch', 0)">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Drawstring pouch', 1000)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/scrunchie.jpg" class="products">
             <p class="item_name">Scrunchie</p>
             <p class="price_tag">700</p>
-            <button class="cart_button" onclick="addtocart('Scrunchie', 0)">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Scrunchie', 700)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/bandana.jpg" class="products">
             <p class="item_name">Bandana</p>
             <p class="price_tag">700</p>
-            <button class="cart_button" onclick="addtocart('Bandana', 0)">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Bandana', 700)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/ghana_ruffledhat.jpg" class="products">
             <p class="item_name">Ghana Ruffledhat</p>
             <p class="price_tag">6000</p>
-            <button class="cart_button" onclick="addtocart('Ghana Ruffledhat', 0)">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Ghana Ruffledhat', 6000)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/card_holder.jpg" class="products">
             <p class="item_name">Card holder</p>
             <p class="price_tag">1500</p>
-            <button class="cart_button" onclick="addtocart('Card holder', 0)">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Card holder', 1500)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/drawstring_pouch.jpg" class="products">
             <p class="item_name">Drawstring pouch</p>
             <p class="price_tag">1000</p>
-            <button class="cart_button" onclick="addtocart('Drawstring pouch', 0)">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Drawstring pouch', 1000)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/scrunchie.jpg" class="products">
             <p class="item_name">Scrunchie</p>
             <p class="price_tag">700</p>
-            <button class="cart_button" onclick="addtocart('Scrunchie', 0)">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Scrunchie', 700)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/bandana.jpg" class="products">
             <p class="item_name">Bandana</p>
             <p class="price_tag">700</p>
-            <button class="cart_button" onclick="addtocart('Bandana', 0)">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Bandana', 700)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/ghana_ruffledhat.jpg" class="products">
             <p class="item_name">Ghana Ruffledhat</p>
             <p class="price_tag">6000 </p>
-            <button class="cart_button" onclick="addtocart('Ghana Ruffledhat', 0)">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Ghana Ruffledhat', 6000)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/card_holder.jpg" class="products">
             <p class="item_name">Card holder</p>
             <p class="price_tag">1500</p>
-            <button class="cart_button" onclick="addtocart('Card holder', 0)">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Card holder', 1500)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/drawstring_pouch.jpg" class="products">
             <p class="item_name">Drawstring pouch</p>
             <p class="price_tag">1000</p>
-            <button class="cart_button" onclick="addtocart('Drawstring pouch', 0)">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Drawstring pouch', 1000)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/scrunchie.jpg" class="products">
             <p class="item_name">Scrunchie</p>
             <p class="price_tag">700</p>
-            <button class="cart_button" onclick="addtocart('Scrunchie', 0)">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Scrunchie', 700)">Add to cart</button>
         </div>
     </div>
     <div class="top_products">Pre-order</div>
@@ -710,181 +737,181 @@
             <img src="items/crochet_bag.jpg" class="products">
             <p class="item_name">Crochet Bag</p>
             <p class="price_tag">11000</p>
-            <button class="cart_button" onclick="addtocart('Crochet Bag', 0)">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Crochet Bag', 11000)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/leg.jpg" class="products">
             <p class="item_name">Slippers</p>
             <p class="price_tag">7000</p>
-            <button class="cart_button" onclick="addtocart('Slippers', 0)">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Slippers', 7000)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/totebaga.jpg" class="products">
             <p class="item_name">Tote bag</p>
             <p class="price_tag">2000</p>
-            <button class="cart_button" onclick="addtocart('Tote bag', 0)">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Tote bag', 2000)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/wallet.jpg" class="products">
             <p class="item_name">Wallet</p>
             <p class="price_tag">1000</p>
-            <button class="cart_button" onclick="addtocart('Wallet', 0)">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Wallet', 11000)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/cases.jpg" class=" products">
             <p class="item_name">Cases</p>
             <p class="price_tag">1000</p>
-            <button class="cart_button" onclick="addtocart('Cases', 0)">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Cases', 1000)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/crochet_bag.jpg" class="products">
             <p class="item_name">Crochet Bag</p>
             <p class="price_tag">11000</p>
-            <button class="cart_button" onclick="addtocart('Crochet Bag', 0)">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Crochet Bag', 11000)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/leg.jpg" class="products">
             <p class="item_name">Slippers</p>
             <p class="price_tag">7000</p>
-            <button class="cart_button" onclick="addtocart('Slippers', 0)">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Slippers', 7000)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/totebaga.jpg" class="products">
             <p class="item_name">Tote bag</p>
             <p class="price_tag">2000</p>
-            <button class="cart_button" onclick="addtocart('Tote bag', 0)">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Tote bag', 2000)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/wallet.jpg" class="products">
             <p class="item_name">Wallet</p>
             <p class="price_tag">1000</p>
-            <button class="cart_button" onclick="addtocart('Wallet', 0)">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Wallet', 1000)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/cases.jpg" class=" products">
             <p class="item_name">Cases</p>
             <p class="price_tag">1000</p>
-            <button class="cart_button" onclick="addtocart('Cases', 0)">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Cases', 1000)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/crochet_bag.jpg" class="products">
             <p class="item_name">Crochet Bag</p>
             <p class="price_tag">11000</p>
-            <button class="cart_button" onclick="addtocart('Crochet Bag', 0)">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Crochet Bag', 11000)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/leg.jpg" class="products">
             <p class="item_name">Slippers</p>
             <p class="price_tag">7000</p>
-            <button class="cart_button" onclick="addtocart('Slippers', 0)">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Slippers', 7000)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/totebaga.jpg" class="products">
             <p class="item_name">Tote bag</p>
             <p class="price_tag">2000</p>
-            <button class="cart_button" onclick="addtocart('Tote bag', 0)">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Tote bag', 2000)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/wallet.jpg" class="products">
             <p class="item_name">Wallet</p>
             <p class="price_tag">1000</p>
-            <button class="cart_button" onclick="addtocart('Wallet', 0)">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Wallet', 1000)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/cases.jpg" class=" products">
             <p class="item_name">Cases</p>
             <p class="price_tag">1000</p>
-            <button class="cart_button" onclick="addtocart('Cases', 0)">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Cases', 1000)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/crochet_bag.jpg" class="products">
             <p class="item_name">Crochet Bag</p>
             <p class="price_tag">11000</p>
-            <button class="cart_button" onclick="addtocart('Crochet Bag', 0)">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Crochet Bag', 11000)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/leg.jpg" class="products">
             <p class="item_name">Slippers</p>
             <p class="price_tag">7000</p>
-            <button class="cart_button" onclick="addtocart('Slippers', 0)">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Slippers', 7000)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/totebaga.jpg" class="products">
             <p class="item_name">Tote bag</p>
             <p class="price_tag">2000</p>
-            <button class="cart_button" onclick="addtocart('Tote bag', 0)">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Tote bag', 2000)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/wallet.jpg" class="products">
             <p class="item_name">Wallet</p>
             <p class="price_tag">1000</p>
-            <button class="cart_button" onclick="addtocart('Wallet', 0)">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Wallet', 1000)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/cases.jpg" class=" products">
             <p class="item_name">Cases</p>
             <p class="price_tag">1000</p>
-            <button class="cart_button" onclick="addtocart('Cases', 0)">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Cases', 1000)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/crochet_bag.jpg" class="products">
             <p class="item_name">Crochet Bag</p>
             <p class="price_tag">11000</p>
-            <button class="cart_button" onclick="addtocart('Crochet Bag', 0)">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Crochet Bag', 11000)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/leg.jpg" class="products">
             <p class="item_name">Slippers</p>
             <p class="price_tag">7000</p>
-            <button class="cart_button" onclick="addtocart('Slippers', 0)">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Slippers', 7000)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/totebaga.jpg" class="products">
             <p class="item_name">Tote bag</p>
             <p class="price_tag">2000</p>
-            <button class="cart_button" onclick="addtocart('Tote bag', 0)">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Tote bag', 2000)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/wallet.jpg" class="products">
             <p class="item_name">Wallet</p>
             <p class="price_tag">1000</p>
-            <button class="cart_button" onclick="addtocart('Wallet', 0)">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Wallet', 1000)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/cases.jpg" class=" products">
             <p class="item_name">Cases</p>
             <p class="price_tag">1000</p>
-            <button class="cart_button" onclick="addtocart('Cases', 0)">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Cases', 1000)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/crochet_bag.jpg" class="products">
             <p class="item_name">Crochet Bag</p>
             <p class="price_tag">11000</p>
-            <button class="cart_button" onclick="addtocart('Crochet Bag', 0)">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Crochet Bag', 11000)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/leg.jpg" class="products">
             <p class="item_name">Slippers</p>
             <p class="price_tag">7000</p>
-            <button class="cart_button" onclick="addtocart('Slippers', 0)">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Slippers', 7000)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/totebaga.jpg" class="products">
             <p class="item_name">Tote bag</p>
             <p class="price_tag">2000</p>
-            <button class="cart_button" onclick="addtocart('Tote bag', 0)">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Tote bag', 2000)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/wallet.jpg" class="products">
             <p class="item_name">Wallet</p>
             <p class="price_tag">1000</p>
-            <button class="cart_button" onclick="addtocart('Wallet', 0)">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Wallet', 1000)">Add to cart</button>
         </div>
         <div class="item">
             <img src="items/cases.jpg" class=" products">
             <p class="item_name">Cases</p>
             <p class="price_tag">1000</p>
-            <button class="cart_button" onclick="addtocart('Cases', 0)">Add to cart</button>
+            <button class="cart_button" onclick="addtocart('Cases', 1000)">Add to cart</button>
         </div>
     </div>
     <footer style="text-align: center; padding: 20px; background-color: #333; color: white; font-size: 12px;">
@@ -917,12 +944,18 @@
             }
         }
         let cart =
-            JSON.parse(localStorage.getItem('cart')) || [];
+            JSON.parse(localStorage.getItem('craftscart')) || [];
         function addtocart(name, price) {
+            if (!cart) { cart = []; }
             cart.push({ name: name, price: price });
             localStorage.setItem('craftscart', JSON.stringify(cart));
             updatecartUI();
             shownotification();
+
+            if (document.getElementById('cart_drawer').style.display === 'block') {
+                viewCart();
+            }
+
         }
 
 
@@ -943,30 +976,44 @@
                 cart_bt.innerText = "🛒 Cart (" + cart.length + ")";
             }
         }
+
         function viewCart() {
-            const modal = document.getElementById('cart-modal');
-            const list = document.getElementById('cart-items-list');
-            const totalDisplay = document.getElementById('cart-total');
 
-            // Clear the old list before showing the new one
-            list.innerHTML = "";
-            let total = 0;
+            const list = document.getElementById('cart_drawer_items');
+            const totalDisplay = document.getElementById('cart_total');
+            const drawer = document.getElementById('cart_drawer');
 
-            if (cart.length === 0) {
-                list.innerHTML = "<p>Your cart is empty.</p>";
-            } else {
-                cart.forEach((item, index) => {
-                    list.innerHTML += `<p>${item.name} - ₦${item.price}</p>`;
-                    total += item.price;
-                });
+
+
+            if (list && totalDisplay) {
+                list.innerHTML = ""
+                let total = 0;
+
+                if (cart.length === 0) {
+                    list.innerHTML = "<p style='color: #888; font-style: italic; margin: 15px 0;'>Your Shopping bag is empty. </p>";
+                } else {
+                    cart.forEach(function (item) {
+                        list.innerHTML += `
+                            <div style="display: flex; justify-content: space-between; margin: 8px 0; font-size: 16px;">
+                                <span>${item.name}</span>
+                                <strong>${item.price}</strong>
+                            </div>`;
+                        total += item.price;
+                    });
+                }
+                totalDisplay.innerText = total;
+            }
+            if (drawer) {
+                drawer.style.display = 'block'
             }
 
-            totalDisplay.innerText = total;
-            modal.style.display = "block";
         }
 
         function closeCart() {
-            document.getElementById('cart-modal').style.display = "none";
+            const drawer = document.getElementById('cart_drawer');
+            if (drawer) {
+                drawer.style.display = 'none';
+            }
         }
 
         function clearCart() {
@@ -1027,17 +1074,37 @@
             }
 
             closeAccount();
+
         }
+
+
+
+
+
+        function clearStorage() {
+            // 1. Wipe out the browser storage completely
+            localStorage.removeItem('craftscart');
+
+            cart = [];
+
+            viewCart();
+
+            if (typeof updateCartUI === "function") {
+                updateCartUI();
+            }
+
+
+
+            document.getElementById('cart_drawer_items').innerHTML = "<p style='color: #888; font-style: italic; margin: 15px 0;'>Your Shopping bag is empty.</p>";
+            document.getElementById('cart_total').innerText = "0";
+
+            alert("Cart memory successfully wiped clean!");
+        }
+
+
+
+
     </script>
-    <div id="cart-modal"
-        style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); background:white; border:2px solid #000; padding:20px; z-index:1000; width:300px;">
-        <h2>Your Cart</h2>
-        <div id="cart-items-list"></div>
-        <hr>
-        <p><strong>Total: ₦<span id="cart-total">0</span></strong></p>
-        <button onclick="closeCart()">Close</button>
-        <button onclick="clearCart()" style="color:red;">Clear Cart</button>
-    </div>
     <div id="help-modal"
         style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); background:white; border:2px solid #000; padding:20px; z-index:1001; width:300px; font-family: sans-serif;">
         <h2>How to Shop</h2>
@@ -1076,6 +1143,19 @@
         <button onclick="closeAccount()"
             style="width:100%; margin-top:5px; background:lightgray; border:none; padding:5px; cursor:pointer;">Cancel</button>
     </div>
+    <div id="cart_drawer">
+
+        <h2>Your Shopping bag</h2>
+        <hr>
+        <div id="cart_drawer_items">
+            <h3>Total: <span id="cart_total">0</span></h3>
+        </div>
+        <hr>
+        <button onclick="closeCart()">Close</button>
+        <button onclick="clearStorage()">Clear Cart</button>
+
+    </div>
+
 </body>
 
 </html>
