@@ -257,6 +257,14 @@
             animation: marquee 25s linear infinite;
         }
 
+        #help-modal {
+            background-color: #ffffff;
+            border: 2px solid #556B2F;
+            border-radius: 13px;
+            padding: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
         #cart_drawer {
             display: none;
             position: fixed;
@@ -272,6 +280,20 @@
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
             z-index: 1000000;
             text-align: center;
+        }
+
+        #cart_drawer button {
+            background-color: lightgreen;
+            padding: 7px 15px;
+            border: none;
+            border: 2px solid wheat;
+            transition: all 0.2s;
+        }
+
+        #cart_drawer button:hover {
+            background-color: green;
+            border: 2px solid lightblue;
+            box-shadow: 0 50 100px rgba(0, 0, 0, 0.3);
         }
 
         @keyframes marquee {
@@ -956,6 +978,8 @@
                 viewCart();
             }
 
+
+
         }
 
 
@@ -971,13 +995,16 @@
             }, 2000)
         }
         function updatecartUI() {
-            const cartButton = document.getElementById('cart_bt');
+            const cart_bt = document.getElementById('cart_bt');
             if (cart_bt) {
                 cart_bt.innerText = "🛒 Cart (" + cart.length + ")";
             }
         }
+        window.addEventListener('DOMContentLoaded', () => {
+            updatecartUI();
+        });
 
-        function viewCart() {
+        /*function viewCart() {
 
             const list = document.getElementById('cart_drawer_items');
             const totalDisplay = document.getElementById('cart_total');
@@ -1007,6 +1034,33 @@
                 drawer.style.display = 'block'
             }
 
+        } */
+
+        function viewCart() {
+            const cart = JSON.parse(localStorage.getItem('craftscart')) || [];
+            const list = document.getElementById('cart_drawer_items');
+            const totalDisplay = document.getElementById('cart_total');
+            const drawer = document.getElementById('cart_drawer');
+
+            if (list && totalDisplay) {
+                list.innerHTML = "";
+                let total = 0;
+
+                if (cart.length === 0) {
+                    list.innerHTML = "<p style='color: #888; font-style: italic; margin: 15px 0;'>Your Shopping bag is empty.</p>";
+                } else {
+                    cart.forEach(item => {
+                        list.innerHTML += `
+                    <div style="display: flex; justify-content: space-between; margin: 8px 0; font-size: 16px;">
+                        <span>${item.name}</span>
+                        <strong>₦${item.price}</strong>
+                    </div>`;
+                        total += item.price;
+                    });
+                }
+                totalDisplay.innerText = total;
+            }
+            if (drawer) drawer.style.display = 'block';
         }
 
         function closeCart() {
@@ -1082,7 +1136,6 @@
 
 
         function clearStorage() {
-            // 1. Wipe out the browser storage completely
             localStorage.removeItem('craftscart');
 
             cart = [];
@@ -1090,7 +1143,7 @@
             viewCart();
 
             if (typeof updateCartUI === "function") {
-                updateCartUI();
+                updatecartUI();
             }
 
 
@@ -1098,7 +1151,7 @@
             document.getElementById('cart_drawer_items').innerHTML = "<p style='color: #888; font-style: italic; margin: 15px 0;'>Your Shopping bag is empty.</p>";
             document.getElementById('cart_total').innerText = "0";
 
-            alert("Cart memory successfully wiped clean!");
+            alert("Wipe out entire cart!");
         }
 
 
@@ -1143,7 +1196,7 @@
         <button onclick="closeAccount()"
             style="width:100%; margin-top:5px; background:lightgray; border:none; padding:5px; cursor:pointer;">Cancel</button>
     </div>
-    <div id="cart_drawer">
+    <!--<div id="cart_drawer">
 
         <h2>Your Shopping bag</h2>
         <hr>
@@ -1153,6 +1206,19 @@
         <hr>
         <button onclick="closeCart()">Close</button>
         <button onclick="clearStorage()">Clear Cart</button>
+
+    </div>-->
+    <div id="cart_drawer">
+        <h2>Your Shopping bag</h2>
+        <hr>
+        <div id="cart_drawer_items"></div> <!-- only items go here -->
+        <hr>
+        <h3>Total: ₦<span id="cart_total">0</span></h3>
+        <button onclick="closeCart()">Close</button>
+        <button onclick="clearStorage()">Clear Cart</button>
+        <a href="checkout.html">
+            <button type="unavailable">Ckeckout</button>
+        </a>
 
     </div>
 
